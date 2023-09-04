@@ -26,10 +26,10 @@ const Hero = () => {
           zIndex: "-1",
         }}
       />
-      <Typography variant="h1" color="#fff">
+      <Typography variant="h1" color="#fff" textAlign="center">
         Hello! I'm James
       </Typography>
-      <Typography color="#fff">
+      <Typography color="#fff" textAlign="center">
         Bringing a different approach to modern ecommerce and web development
       </Typography>
       <Box

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
 
-const TextParagraph = ({ variant, textAlignment, renderDivider }) => {
+const TextParagraph = ({ variant, textAlignment, renderDivider, header }) => {
   return (
     <Box
       component="section"
@@ -14,7 +14,7 @@ const TextParagraph = ({ variant, textAlignment, renderDivider }) => {
         py: 12,
       }}>
       <Typography variant={variant} sx={{ textAlign: `${textAlignment}` }}>
-        About Me
+        {header}
       </Typography>
       {renderDivider && (
         <Divider
