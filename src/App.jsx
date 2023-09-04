@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import TextParagraph from "./components/TextParagraph";
 import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
+import MasonryImages from "./components/MasonryImages";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         />
         <ProgressBarGrid />
         <ServicesGrid />
+        <MasonryImages />
       </main>
     </>
   );
