@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import { Typography, Divider } from "@mui/material";
 
 const itemData = [
   {
@@ -60,26 +61,43 @@ const MasonryImages = () => {
       component="section"
       sx={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        margin: "0 auto",
-        maxWidth: "1000px",
-        height: "auto",
-        overflowY: "auto",
+        flexGrow: 1,
+        textAlign: "center",
         py: 12,
+        width: "100%",
       }}>
-      <ImageList variant="masonry" cols={2} gap={8} sx={{ width: "100%" }}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
+      <Typography variant="h2">Portfolio</Typography>
+      <Divider
+        variant="middle"
+        sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 10 }}
+      />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "0 auto",
+          maxWidth: "1200px",
+          width: "85%",
+          height: "auto",
+          overflowY: "auto",
+        }}>
+        <ImageList variant="masonry" cols={2} gap={8} sx={{ width: "100%" }}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
     </Box>
   );
 };
