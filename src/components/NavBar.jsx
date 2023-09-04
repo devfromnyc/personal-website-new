@@ -8,7 +8,7 @@ import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 import SideNav from "./SideNav";
 
@@ -21,10 +21,12 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="absolute" sx={{ zIndex: 10 }}>
+    <AppBar position="absolute" sx={{ zIndex: 10, background: "transparent" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <DeveloperModeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <DeveloperModeIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -68,7 +70,9 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <DeveloperModeIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <DeveloperModeIcon
+            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+          />
           <Typography
             variant="h5"
             noWrap
