@@ -22,11 +22,21 @@ const ServicesGrid = () => {
         variant="middle"
         sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 6 }}
       />
-      <Grid component="ul" container spacing={2}>
+      <Grid
+        component="ul"
+        container
+        spacing={2}
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          width: { xs: "auto", lg: "70%" },
+        }}>
         <Grid
           component="li"
           item
-          xs={6}
+          xs={12}
+          sm={6}
+          md={5}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -39,7 +49,9 @@ const ServicesGrid = () => {
         <Grid
           component="li"
           item
-          xs={6}
+          xs={12}
+          sm={6}
+          md={5}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -51,7 +63,9 @@ const ServicesGrid = () => {
         <Grid
           component="li"
           item
-          xs={6}
+          xs={12}
+          sm={6}
+          md={5}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -63,7 +77,9 @@ const ServicesGrid = () => {
         <Grid
           component="li"
           item
-          xs={6}
+          xs={12}
+          sm={6}
+          md={5}
           sx={{
             display: "flex",
             flexDirection: "column",

@@ -4,8 +4,20 @@ import ProgressBar from "./ProgressBar";
 
 const ProgressBarGrid = () => {
   return (
-    <Box component="section" sx={{ flexGrow: 1 }}>
-      <Grid component="ul" container spacing={2}>
+    <Box
+      component="section"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        flexGrow: 1,
+      }}>
+      <Grid
+        component="ul"
+        container
+        spacing={2}
+        sx={{ width: { xs: "auto", md: "70%" } }}>
         <Grid
           component="li"
           item
@@ -15,7 +27,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>HTML</Typography>
+          <Typography fontWeight="600">HTML</Typography>
           <ProgressBar maxValue={60} />
         </Grid>
         <Grid
@@ -27,7 +39,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>CSS</Typography>
+          <Typography fontWeight="600">CSS</Typography>
           <ProgressBar maxValue={70} />
         </Grid>
         <Grid
@@ -39,7 +51,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>Javascript</Typography>
+          <Typography fontWeight="600">Javascript</Typography>
           <ProgressBar maxValue={80} />
         </Grid>
         <Grid
@@ -51,7 +63,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>Nodejs</Typography>
+          <Typography fontWeight="600">Nodejs</Typography>
           <ProgressBar maxValue={90} />
         </Grid>
         <Grid
@@ -63,7 +75,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>React</Typography>
+          <Typography fontWeight="600">React</Typography>
           <ProgressBar maxValue={90} />
         </Grid>
         <Grid
@@ -75,7 +87,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>Material UI</Typography>
+          <Typography fontWeight="600">Material UI</Typography>
           <ProgressBar maxValue={90} />
         </Grid>
         <Grid
@@ -87,7 +99,7 @@ const ProgressBarGrid = () => {
             flexDirection: "column",
             alignItems: "flex-start",
           }}>
-          <Typography>MERN Stack</Typography>
+          <Typography fontWeight="600">MERN Stack</Typography>
           <ProgressBar maxValue={90} />
         </Grid>
       </Grid>
