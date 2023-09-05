@@ -6,11 +6,18 @@ import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
 import MasonryImages from "./components/MasonryImages";
 import FlipImages from "./components/FlipImages";
+import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Ysabeau SC, sans-serif",
+  },
+});
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <NavBar />
       <Hero />
       <main>
@@ -25,7 +32,7 @@ function App() {
         <MasonryImages />
         <FlipImages />
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 
