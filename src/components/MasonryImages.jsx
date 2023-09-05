@@ -81,7 +81,7 @@ const MasonryImages = () => {
           alignItems: "center",
           margin: "0 auto",
           maxWidth: "1200px",
-          width: "85%",
+          width: "75%",
           height: "auto",
           overflowY: "auto",
         }}>

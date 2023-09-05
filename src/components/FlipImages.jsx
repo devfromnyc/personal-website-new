@@ -103,6 +103,8 @@ const FlipImages = () => {
               sx={{
                 mb: 7,
                 mt: 4,
+                pl: 3,
+                pr: 3,
                 perspective: "1000px",
                 backgroundColor: "transparent",
               }}>

@@ -1,5 +1,8 @@
+/* Global Styles */
+
 body {
   margin: 0 !important;
+  font-family: "Oxygen", sans-serif;
 }
 main {
   max-width: 1800px;
