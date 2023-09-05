@@ -4,7 +4,7 @@ import { Typography, Button } from "@mui/material";
 
 const Hero = () => {
   const imageURL =
-    "https://images.unsplash.com/photo-1554306274-f23873d9a26c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+    "https://images.unsplash.com/photo-1481887328591-3e277f9473dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1481&q=80";
   return (
     <Box
       display="flex"
@@ -26,7 +26,11 @@ const Hero = () => {
           zIndex: "-1",
         }}
       />
-      <Typography variant="h1" color="#fff" textAlign="center">
+      <Typography
+        variant="h1"
+        color="#fff"
+        textAlign="center"
+        sx={{ fontWeight: 700 }}>
         Hello! I'm James
       </Typography>
       <Typography color="#fff" textAlign="center">

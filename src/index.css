@@ -1,8 +1,16 @@
 /* Global Styles */
 
+/* Font Families */
+
+/* font-family: "Oxygen", sans-serif; */
+/* font-family: 'EB Garamond', serif; */
+/* font-family: "Zilla Slab", serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+/* font-family: 'Ysabeau SC', sans-serif; */
+
 body {
   margin: 0 !important;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Ysabeau SC", sans-serif;
 }
 main {
   max-width: 1800px;

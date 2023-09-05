@@ -15,7 +15,9 @@ const ServicesGrid = () => {
         textAlign: "center",
         py: 12,
       }}>
-      <Typography variant="h2">Services</Typography>
+      <Typography variant="h2" sx={{ fontWeight: "700" }}>
+        Services
+      </Typography>
       <Divider
         variant="middle"
         sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 6 }}

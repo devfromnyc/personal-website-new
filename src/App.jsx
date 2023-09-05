@@ -8,17 +8,10 @@ import MasonryImages from "./components/MasonryImages";
 import FlipImages from "./components/FlipImages";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
-import "./Fonts.css";
-
-const theme = createTheme({
-  typography: {
-    fontFamily: ["Oxygen", "sans-serif"].join(","),
-  },
-});
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <NavBar />
       <Hero />
       <main>
@@ -33,7 +26,7 @@ function App() {
         <MasonryImages />
         <FlipImages />
       </main>
-    </ThemeProvider>
+    </>
   );
 }
 

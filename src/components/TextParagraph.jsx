@@ -13,7 +13,9 @@ const TextParagraph = ({ variant, textAlignment, renderDivider, header }) => {
         width: "100%",
         py: 12,
       }}>
-      <Typography variant={variant} sx={{ textAlign: `${textAlignment}` }}>
+      <Typography
+        variant={variant}
+        sx={{ textAlign: `${textAlignment}`, fontWeight: "700" }}>
         {header}
       </Typography>
       {renderDivider && (

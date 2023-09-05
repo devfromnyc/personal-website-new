@@ -80,7 +80,9 @@ const FlipImages = () => {
         py: 12,
         width: "100%",
       }}>
-      <Typography variant="h2">Portfolio</Typography>
+      <Typography variant="h2" sx={{ fontWeight: "700" }}>
+        Portfolio
+      </Typography>
       <Divider
         variant="middle"
         sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 4 }}
