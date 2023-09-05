@@ -6,7 +6,6 @@ import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
 import MasonryImages from "./components/MasonryImages";
 import FlipImages from "./components/FlipImages";
-import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 function App() {
