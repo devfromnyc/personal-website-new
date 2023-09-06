@@ -13,6 +13,7 @@ const ProgressBarGrid = () => {
         width: "100%",
         flexGrow: 1,
         backgroundColor: "#000",
+        pb: 20,
       }}>
       <Grid
         component="ul"

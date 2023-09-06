@@ -65,25 +65,39 @@ const MasonryImages = () => {
         justifyContent: "center",
         alignItems: "center",
         flexGrow: 1,
+        pb: 12,
         textAlign: "center",
-        py: 12,
         width: "100%",
+        backgroundColor: "#fff",
       }}>
-      <Typography variant="h2">Portfolio</Typography>
-      <Divider
-        variant="middle"
-        sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 10 }}
-      />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          backgroundColor: "#000",
+          py: { xs: 8, sm: 14, md: 20 },
+        }}>
+        <Typography variant="h2">Portfolio</Typography>
+        <Divider
+          variant="middle"
+          sx={{ mt: 2, width: "25%", borderColor: "#fff", mb: 10 }}
+        />
+      </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: "0 auto",
+          margin: { xs: "-110px auto 0px auto", sm: "-150px auto 0px auto" },
           maxWidth: "1200px",
           width: { xs: "90%", sm: "85%", lg: "65%" },
           height: "auto",
           overflowY: "auto",
+          position: "relative",
+          zIndex: "10",
         }}>
         <ImageList variant="masonry" cols={2} gap={8} sx={{ width: "100%" }}>
           {itemData.map((item) => (

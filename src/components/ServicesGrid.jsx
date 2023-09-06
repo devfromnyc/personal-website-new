@@ -13,6 +13,8 @@ const ServicesGrid = () => {
         alignItems: "center",
         flexGrow: 1,
         textAlign: "center",
+        backgroundColor: "#fff",
+        color: "#000",
         py: 12,
       }}>
       <Typography variant="h2" sx={{ fontWeight: "700" }}>
