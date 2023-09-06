@@ -8,7 +8,16 @@ import Box from "@mui/material/Box";
 function LinearProgressWithLabel(props) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
-      <Box sx={{ width: "100%", mr: 1 }}>
+      <Box
+        sx={{
+          width: "100%",
+          mr: 1,
+          backgroundColor: "#fff",
+          "& span.MuiLinearProgress-root": { backgroundColor: "#fff" },
+          "& span.MuiLinearProgress-bar": {
+            backgroundColor: "rgb(47,189,164)",
+          },
+        }}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box sx={{ minWidth: 35 }}>
@@ -43,7 +52,11 @@ const ProgressBar = ({ maxValue }) => {
     };
   }, [progress]);
   return (
-    <Box sx={{ width: "100%", maxWidth: "600px" }}>
+    <Box
+      sx={{
+        width: "100%",
+        maxWidth: "600px",
+      }}>
       <LinearProgressWithLabel value={progress} sx={{ height: "8px" }} />
     </Box>
   );

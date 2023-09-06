@@ -6,7 +6,7 @@ import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
 import MasonryImages from "./components/MasonryImages";
 import FlipImages from "./components/FlipImages";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 const theme = createTheme({
@@ -20,7 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <NavBar />
       <Hero />
-      <main>
+      <Box component="main" sx={{ backgroundColor: "#000", color: "#fff" }}>
         <TextParagraph
           variant="h2"
           textAlignment="center"
@@ -31,7 +31,7 @@ function App() {
         <ServicesGrid />
         <MasonryImages />
         <FlipImages />
-      </main>
+      </Box>
     </ThemeProvider>
   );
 }

@@ -12,7 +12,10 @@ const ServicesCard = () => {
           borderRadius: 0,
           py: 4,
           transition: "all 0.4s ease 0s",
-          ":hover": { backgroundColor: "#1976d2", color: "#fff" },
+          ":hover": {
+            backgroundColor: "rgb(35,74,188)",
+            color: "#fff",
+          },
         }}>
         <CardContent
           sx={{

@@ -2,9 +2,11 @@ import React from "react";
 import { Box } from "@mui/material";
 import { Typography, Button } from "@mui/material";
 
+// https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80
+
 const Hero = () => {
   const imageURL =
-    "https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80";
+    "https://images.unsplash.com/photo-1619597455322-4fbbd820250a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
   return (
     <Box
       display="flex"
@@ -42,10 +44,14 @@ const Hero = () => {
         alignItems="center"
         flexDirection="row"
         sx={{ mt: 4 }}>
-        <Button variant="contained" sx={{ mr: 4 }}>
+        <Button
+          variant="contained"
+          sx={{ mr: 4, backgroundColor: "rgb(47,189,164)" }}>
           About Me
         </Button>
-        <Button variant="contained">Portfolio</Button>
+        <Button variant="contained" sx={{ backgroundColor: "rgb(47,189,164)" }}>
+          Portfolio
+        </Button>
       </Box>
     </Box>
   );

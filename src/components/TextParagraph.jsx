@@ -21,7 +21,7 @@ const TextParagraph = ({ variant, textAlignment, renderDivider, header }) => {
       {renderDivider && (
         <Divider
           variant="middle"
-          sx={{ mt: 2, width: "25%", borderColor: "#000" }}
+          sx={{ mt: 2, width: "25%", borderColor: "#fff" }}
         />
       )}
       <Typography
