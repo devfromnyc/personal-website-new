@@ -12,7 +12,7 @@ const ProgressBarGrid = () => {
         alignItems: "center",
         width: "100%",
         flexGrow: 1,
-        backgroundColor: "#000",
+        backgroundColor: "rgb(54,57,62)",
         pb: 20,
       }}>
       <Grid

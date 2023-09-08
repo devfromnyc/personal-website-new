@@ -2,11 +2,22 @@ import React from "react";
 import { Box } from "@mui/material";
 import { Typography, Button } from "@mui/material";
 
-// https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80
+// Images
 
+// https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80
+// https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80
+// https://images.unsplash.com/photo-1619597455322-4fbbd820250a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
+// https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80
+// https://images.unsplash.com/photo-1595327656903-2f54e37ce09b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80
+// https://images.unsplash.com/photo-1554078140-01f553ad4d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80
+
+// Pallettes
+// https://www.color-hex.com/color-palette/993
+// https://www.color-hex.com/color-palette/28549
+// https://www.color-hex.com/color-palette/64550
 const Hero = () => {
   const imageURL =
-    "https://images.unsplash.com/photo-1619597455322-4fbbd820250a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80";
+    "https://images.unsplash.com/photo-1554078140-01f553ad4d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80";
   return (
     <Box
       display="flex"
@@ -46,10 +57,36 @@ const Hero = () => {
         sx={{ mt: 4 }}>
         <Button
           variant="contained"
-          sx={{ mr: 4, backgroundColor: "rgb(47,189,164)" }}>
+          sx={{
+            mr: 4,
+            backgroundColor: "transparent",
+            border: "2px solid #fff",
+            px: 8,
+            py: 2,
+            ":hover": {
+              backgroundColor: "rgb(51,115,166)",
+              borderColor: "rgb(51,115,166)",
+            },
+            ":focus:": {
+              backgroundColor: "rgb(51,115,166)",
+              borderColor: "rgb(51,115,166)",
+            },
+          }}>
           About Me
         </Button>
-        <Button variant="contained" sx={{ backgroundColor: "rgb(47,189,164)" }}>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "rgb(47,189,164)",
+            backgroundColor: "transparent",
+            border: "2px solid #fff",
+            px: 8,
+            py: 2,
+            ":hover": {
+              backgroundColor: "rgb(51,115,166)",
+              borderColor: "rgb(51,115,166)",
+            },
+          }}>
           Portfolio
         </Button>
       </Box>

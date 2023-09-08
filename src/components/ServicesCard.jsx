@@ -13,7 +13,7 @@ const ServicesCard = () => {
           py: 4,
           transition: "all 0.4s ease 0s",
           ":hover": {
-            backgroundColor: "rgb(35,74,188)",
+            backgroundColor: "rgb(51,115,166)",
             color: "#fff",
           },
         }}>

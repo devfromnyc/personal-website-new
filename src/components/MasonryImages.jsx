@@ -77,7 +77,7 @@ const MasonryImages = () => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          backgroundColor: "#000",
+          backgroundColor: "rgb(54,57,62)",
           py: { xs: 8, sm: 14, md: 20 },
         }}>
         <Typography variant="h2">Portfolio</Typography>

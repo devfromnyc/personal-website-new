@@ -12,6 +12,7 @@ const TextParagraph = ({ variant, textAlignment, renderDivider, header }) => {
         alignItems: "center",
         width: "100%",
         py: 12,
+        backgroundColor: "rgb(54,57,62)",
       }}>
       <Typography
         variant={variant}
