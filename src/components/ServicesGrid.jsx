@@ -1,6 +1,10 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
 import { Box, Grid, Typography, Divider } from "@mui/material";
+import shopifyIcon from "../assets/shopify-circle.png";
+import developmentIcon from "../assets/code.png";
+import projectIcon from "../assets/layers.png";
+import freelanceIcon from "../assets/freelance.png";
 
 const ServicesGrid = () => {
   return (
@@ -46,7 +50,13 @@ const ServicesGrid = () => {
             width: "100%",
             paddingLeft: "0px !important",
           }}>
-          <ServicesCard />
+          <ServicesCard
+            header="Web Development"
+            icon={developmentIcon}
+            innerText={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+            }
+          />
         </Grid>
         <Grid
           component="li"
@@ -60,7 +70,13 @@ const ServicesGrid = () => {
             alignItems: "center",
             paddingLeft: "0px !important",
           }}>
-          <ServicesCard />
+          <ServicesCard
+            header="Shopify Development"
+            icon={shopifyIcon}
+            innerText={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+            }
+          />
         </Grid>
         <Grid
           component="li"
@@ -74,7 +90,13 @@ const ServicesGrid = () => {
             alignItems: "center",
             paddingLeft: "0px !important",
           }}>
-          <ServicesCard />
+          <ServicesCard
+            header="Web Projects/Consulting"
+            icon={projectIcon}
+            innerText={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+            }
+          />
         </Grid>
         <Grid
           component="li"
@@ -88,7 +110,13 @@ const ServicesGrid = () => {
             alignItems: "center",
             paddingLeft: "0px !important",
           }}>
-          <ServicesCard />
+          <ServicesCard
+            header="Freelancing/Contract"
+            icon={freelanceIcon}
+            innerText={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+            }
+          />
         </Grid>
       </Grid>
     </Box>

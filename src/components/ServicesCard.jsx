@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Typography, Card, CardContent } from "@mui/material";
-import codingLogo from "../assets/coding-icon.gif";
 
-const ServicesCard = () => {
+const ServicesCard = ({ header, icon, innerText }) => {
   return (
     <Box sx={{ minWidth: 275 }}>
       <Card
@@ -21,17 +20,16 @@ const ServicesCard = () => {
           sx={{
             textAlign: "center",
           }}>
-          <img src={codingLogo} alt="Coding Icon" className="icon-img" />
+          <img src={icon} alt="Coding Icon" className="icon-img" />
           <Typography
             sx={{ fontSize: 22, mb: 2 }}
             variant="h3"
             fontWeight="bold"
             gutterBottom>
-            Word of the Day
+            {header}
           </Typography>
           <Typography variant="body2" sx={{ fontSize: 14, maxWidth: "300px" }}>
-            Fruit saw for brought fish forth had ave is man a that their Two he
-            is dominion evening their Fruit saw for brought fish forth
+            {innerText}
           </Typography>
         </CardContent>
       </Card>
