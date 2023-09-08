@@ -68,6 +68,7 @@ const Hero = () => {
             mb: { xs: 4, sm: 0 },
             backgroundColor: "transparent",
             border: "2px solid #fff",
+            textShadow: "1px 1px black",
             px: 8,
             py: 2,
             ":hover": {
@@ -84,11 +85,11 @@ const Hero = () => {
         <Button
           variant="contained"
           sx={{
-            backgroundColor: "rgb(47,189,164)",
             backgroundColor: "transparent",
             border: "2px solid #fff",
             px: 8,
             py: 2,
+            textShadow: "1px 1px black",
             ":hover": {
               backgroundColor: "rgb(51,115,166)",
               borderColor: "rgb(51,115,166)",

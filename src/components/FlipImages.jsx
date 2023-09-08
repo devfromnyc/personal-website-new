@@ -5,24 +5,25 @@ import { Typography, Divider } from "@mui/material";
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-    author: "@bkristastucchio",
+    img: "https://images.unsplash.com/photo-1541877944-ac82a091518a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    title: "Youtube Clone",
+    projectInfo: "A REACT Application that mirrors youtube!",
   },
   {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-    author: "@rollelflex_graphy726",
+    img: "https://images.unsplash.com/photo-1579621970590-9d624316904b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    title: "SAVR APP",
+    projectInfo:
+      "A fullstack REACT application that tracks how much money you save!",
   },
   {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-    author: "@helloimnik",
+    img: "https://images.unsplash.com/photo-1598791318878-10e76d178023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    title: "Todo List",
+    projectInfo: "Add items/tasks to a list that you'd like TODO in the future",
   },
   {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-    author: "@nolanissac",
+    img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    title: "Fitness App",
+    projectInfo: "Project Info Coming Soon!",
   },
 ];
 
@@ -106,7 +107,34 @@ const FlipImages = () => {
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                    }}></Box>
+                    }}>
+                    <Typography
+                      variant="h3"
+                      sx={{
+                        fontSize: {
+                          xs: "24px",
+                          sm: "32px",
+                          md: "40px",
+                          lg: "52px",
+                        },
+                        fontWeight: "600",
+                      }}>
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        mt: 1,
+                        maxWidth: "350px",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "16px",
+                          md: "20px",
+                          lg: "24px",
+                        },
+                      }}>
+                      {item.projectInfo}
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
             </ImageListItem>

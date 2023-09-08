@@ -39,6 +39,7 @@ function NavBar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              textShadow: "1px 1px black",
             }}>
             James Jannetti
           </Typography>
@@ -85,6 +86,7 @@ function NavBar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              textShadow: "1px 1px black",
             }}>
             James Jannetti
           </Typography>
@@ -92,7 +94,12 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                sx={{ my: 2, color: "white", display: "block" }}>
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  textShadow: "1px 1px black",
+                }}>
                 {page}
               </Button>
             ))}
