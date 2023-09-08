@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { ImageList, ImageListItem } from "@mui/material";
 import { Typography, Divider } from "@mui/material";
 
 const itemData = [
@@ -24,46 +24,6 @@ const itemData = [
     title: "Coffee",
     author: "@nolanissac",
   },
-  {
-    img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
-    title: "Hats",
-    author: "@hjrc33",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-    title: "Honey",
-    author: "@arwinneil",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
-    title: "Basketball",
-    author: "@tjdragotta",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Fern",
-    author: "@katie_wasserman",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
-    title: "Mushrooms",
-    author: "@silverdalex",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
-    title: "Tomato basil",
-    author: "@shelleypauls",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
-    title: "Sea star",
-    author: "@peterlaster",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
-    title: "Bike",
-    author: "@southside_customs",
-  },
 ];
 
 const FlipImages = () => {
@@ -77,36 +37,51 @@ const FlipImages = () => {
         alignItems: "center",
         flexGrow: 1,
         textAlign: "center",
-        py: 12,
+        backgroundColor: "#fff",
         width: "100%",
       }}>
-      <Typography variant="h2" sx={{ fontWeight: "700" }}>
-        Portfolio
-      </Typography>
-      <Divider
-        variant="middle"
-        sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 4 }}
-      />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          backgroundColor: "rgb(54,57,62)",
+          py: { xs: 8, sm: 14, lg: 20 },
+        }}>
+        <Typography variant="h2">Portfolio</Typography>
+        <Divider
+          variant="middle"
+          sx={{ mt: 2, width: "25%", borderColor: "#fff", mb: 10 }}
+        />
+      </Box>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: "0 auto",
-          maxWidth: "1200px",
-          width: "85%",
+          margin: { xs: "-110px auto 0px auto", sm: "-160px auto 0px auto" },
+          maxWidth: "1800px",
+          width: "90%",
           height: "auto",
           overflowY: "auto",
         }}>
-        <ImageList sx={{ width: "100%" }}>
+        <ImageList
+          sx={{
+            width: "100%",
+            gridTemplateColumns: {
+              xs: "repeat(1, 1fr) !important",
+              md: "repeat(2, 1fr)",
+            },
+          }}>
           {itemData.map((item) => (
             <ImageListItem
               key={item.img}
               sx={{
-                mb: 7,
                 mt: 4,
-                pl: 3,
-                pr: 3,
+                pl: 2,
+                pr: 2,
                 perspective: "1000px",
                 backgroundColor: "transparent",
               }}>
@@ -133,11 +108,6 @@ const FlipImages = () => {
                     }}></Box>
                 </Box>
               </Box>
-              <ImageListItemBar
-                title={item.title}
-                subtitle={<span>by: {item.author}</span>}
-                position="below"
-              />
             </ImageListItem>
           ))}
         </ImageList>

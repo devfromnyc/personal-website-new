@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import TextParagraph from "./components/TextParagraph";
 import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
-import MasonryImages from "./components/MasonryImages";
 import FlipImages from "./components/FlipImages";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
@@ -29,7 +28,6 @@ function App() {
         />
         <ProgressBarGrid />
         <ServicesGrid />
-        <MasonryImages />
         <FlipImages />
       </Box>
     </ThemeProvider>

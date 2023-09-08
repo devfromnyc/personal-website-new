@@ -36,6 +36,7 @@ const Hero = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRFepeat: "no-repeat",
+          backgroundAttachment: "fixed",
           zIndex: "-1",
         }}
       />
