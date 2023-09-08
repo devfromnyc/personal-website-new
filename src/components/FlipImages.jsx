@@ -72,8 +72,9 @@ const FlipImages = () => {
             width: "100%",
             gridTemplateColumns: {
               xs: "repeat(1, 1fr) !important",
-              md: "repeat(2, 1fr)",
+              sm: "repeat(2, 1fr) !important",
             },
+            pb: 12,
           }}>
           {itemData.map((item) => (
             <ImageListItem

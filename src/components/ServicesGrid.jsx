@@ -36,6 +36,7 @@ const ServicesGrid = () => {
           justifyContent: "center",
           alignItems: "center",
           width: { xs: "auto", lg: "70%" },
+          paddingInlineStart: { xs: "20px !important", md: "0px !important" },
         }}>
         <Grid
           component="li"

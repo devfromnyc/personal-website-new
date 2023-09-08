@@ -44,22 +44,28 @@ const Hero = () => {
         variant="h1"
         color="#fff"
         textAlign="center"
-        sx={{ fontWeight: 700 }}>
+        sx={{ fontWeight: 700, textShadow: "2px 2px black" }}>
         Hello! I'm James
       </Typography>
-      <Typography color="#fff" textAlign="center">
+      <Typography
+        color="#fff"
+        textAlign="center"
+        sx={{ textShadow: "1px 1px black" }}>
         Bringing a different approach to modern ecommerce and web development
       </Typography>
       <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="row"
-        sx={{ mt: 4 }}>
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" },
+          mt: 4,
+        }}>
         <Button
           variant="contained"
           sx={{
-            mr: 4,
+            mr: { xs: "0px", sm: 4 },
+            mb: { xs: 4, sm: 0 },
             backgroundColor: "transparent",
             border: "2px solid #fff",
             px: 8,

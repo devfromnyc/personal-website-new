@@ -19,7 +19,13 @@ const ProgressBarGrid = () => {
         component="ul"
         container
         spacing={2}
-        sx={{ width: { xs: "auto", md: "70%" } }}>
+        sx={{
+          width: {
+            xs: "auto",
+            md: "70%",
+          },
+          paddingInlineStart: { xs: "20px !important", md: "0px !important" },
+        }}>
         <Grid
           component="li"
           item
