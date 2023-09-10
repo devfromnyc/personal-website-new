@@ -64,7 +64,7 @@ const FlipImages = () => {
           justifyContent: "center",
           alignItems: "center",
           margin: { xs: "-110px auto 0px auto", sm: "-160px auto 0px auto" },
-          maxWidth: "1800px",
+          maxWidth: "1400px",
           width: "90%",
           height: "auto",
           overflowY: "auto",
@@ -76,7 +76,7 @@ const FlipImages = () => {
               xs: "repeat(1, 1fr) !important",
               sm: "repeat(2, 1fr) !important",
             },
-            pb: 12,
+            pb: { xs: 12, lg: 24, xl: 32 },
           }}>
           {itemData.map((item) => (
             <ImageListItem
@@ -90,7 +90,10 @@ const FlipImages = () => {
               }}>
               <Box
                 className="flip-card"
-                sx={{ width: "100%", height: "350px" }}>
+                sx={{
+                  width: "100%",
+                  height: { xs: "250px", sm: "350px", lg: "650px" },
+                }}>
                 <Box className="flip-card-inner">
                   <Box
                     className="flip-card-front"
