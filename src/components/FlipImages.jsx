@@ -31,6 +31,7 @@ const FlipImages = () => {
   return (
     <Box
       component="section"
+      id="Portfolio"
       sx={{
         display: "flex",
         flexDirection: "column",

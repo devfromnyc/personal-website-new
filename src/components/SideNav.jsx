@@ -11,6 +11,8 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import FilePresentIcon from "@mui/icons-material/FilePresent";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import Person2Icon from "@mui/icons-material/Person2";
+import CloseIcon from "@mui/icons-material/Close";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -36,25 +38,34 @@ const SideNav = () => {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
-      <List>
-        {["Home", "Portfolio", "Resume", "Contact Me"].map((text) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {text == "Home" ? (
-                  <HomeIcon />
-                ) : text == "Portfolio" ? (
-                  <LibraryBooksIcon />
-                ) : text == "Resume" ? (
-                  <FilePresentIcon />
-                ) : (
-                  <PhoneIcon />
-                )}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+      <List sx={{ position: "relative" }}>
+        {["Home", "About", "Portfolio", "Resume", "Contact", "Exit"].map(
+          (text) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton
+                component="a"
+                role="link"
+                href={text !== "Exit" ? `#` + text : "#"}>
+                <ListItemIcon>
+                  {text == "Home" ? (
+                    <HomeIcon />
+                  ) : text == "Portfolio" ? (
+                    <LibraryBooksIcon />
+                  ) : text == "Resume" ? (
+                    <FilePresentIcon />
+                  ) : text == "Contact" ? (
+                    <PhoneIcon />
+                  ) : text == "About" ? (
+                    <Person2Icon />
+                  ) : (
+                    <CloseIcon />
+                  )}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          )
+        )}
       </List>
     </Box>
   );

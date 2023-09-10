@@ -24,6 +24,7 @@ function App() {
           variant="h2"
           textAlignment="center"
           header="About Me"
+          sectionId="About"
           renderDivider
         />
         <ProgressBarGrid />

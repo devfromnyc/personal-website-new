@@ -25,6 +25,7 @@ const Hero = () => {
       flexDirection="column"
       alignItems="center"
       component="section"
+      id="Home"
       sx={{ height: "100vh", width: "100%" }}>
       <Box
         component="div"

@@ -10,6 +10,7 @@ const ServicesGrid = () => {
   return (
     <Box
       component="section"
+      id="Services"
       sx={{
         display: "flex",
         flexDirection: "column",

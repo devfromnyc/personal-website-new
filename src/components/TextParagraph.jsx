@@ -1,10 +1,17 @@
 import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
 
-const TextParagraph = ({ variant, textAlignment, renderDivider, header }) => {
+const TextParagraph = ({
+  variant,
+  textAlignment,
+  renderDivider,
+  header,
+  sectionId,
+}) => {
   return (
     <Box
       component="section"
+      id={sectionId}
       sx={{
         display: "flex",
         flexDirection: "column",
