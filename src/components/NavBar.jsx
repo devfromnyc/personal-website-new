@@ -94,6 +94,9 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                component="a"
+                href={"#" + page}
+                role="link"
                 sx={{
                   my: 2,
                   color: "white",
