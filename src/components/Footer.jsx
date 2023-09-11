@@ -4,7 +4,7 @@ import linkedIn from "../assets/linkedin_rounded_shiny.png";
 import github from "../assets/github_round_shiny.png";
 import email from "../assets/gmail.png";
 
-const footerMenu = ["Home", "About", "Portfolio", "Resume"];
+const footerMenu = ["Home", "About", "Portfolio", "Pricing"];
 
 const footerIcons = [linkedIn, github, email];
 
@@ -74,7 +74,7 @@ const Footer = () => {
               width: "170px",
             }}>
             {footerIcons.map((icon) => (
-              <Link href="#">
+              <Link href="#" key={icon}>
                 <img src={icon} alt="Footer Icon" className="footer-icon" />
               </Link>
             ))}

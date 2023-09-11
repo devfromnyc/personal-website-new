@@ -39,7 +39,7 @@ const SideNav = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}>
       <List sx={{ position: "relative" }}>
-        {["Home", "About", "Portfolio", "Resume", "Contact", "Exit"].map(
+        {["Home", "About", "Portfolio", "Pricing", "Contact", "Exit"].map(
           (text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton

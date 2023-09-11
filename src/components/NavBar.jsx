@@ -12,7 +12,7 @@ import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 import SideNav from "./SideNav";
 
-const pages = ["Home", "About", "Portfolio", "Resume", "Contact"];
+const pages = ["Home", "About", "Portfolio", "Pricing", "Contact"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
