@@ -3,6 +3,11 @@
   max-width: 100px;
 }
 
+.footer-icon {
+  max-width: 40px;
+  width: 100%;
+}
+
 /* Flip Cards */
 
 .flip-card-bg {
