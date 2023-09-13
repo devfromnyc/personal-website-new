@@ -1,10 +1,9 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
 import { Box, Grid, Typography, Divider } from "@mui/material";
-import shopifyIcon from "../assets/shopify-circle.png";
-import developmentIcon from "../assets/code.png";
-import projectIcon from "../assets/layers.png";
-import freelanceIcon from "../assets/freelance.png";
+import shopifyIcon from "../assets/money-bag.gif";
+import developmentIcon from "../assets/html.gif";
+import freelanceIcon from "../assets/success.gif";
 
 const ServicesGrid = () => {
   return (
@@ -43,8 +42,7 @@ const ServicesGrid = () => {
           component="li"
           item
           xs={12}
-          sm={6}
-          md={5}
+          sm={4}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -64,8 +62,7 @@ const ServicesGrid = () => {
           component="li"
           item
           xs={12}
-          sm={6}
-          md={5}
+          sm={4}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -84,28 +81,7 @@ const ServicesGrid = () => {
           component="li"
           item
           xs={12}
-          sm={6}
-          md={5}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            paddingLeft: "0px !important",
-          }}>
-          <ServicesCard
-            header="Web Projects/Consulting"
-            icon={projectIcon}
-            innerText={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
-            }
-          />
-        </Grid>
-        <Grid
-          component="li"
-          item
-          xs={12}
-          sm={6}
-          md={5}
+          sm={4}
           sx={{
             display: "flex",
             flexDirection: "column",

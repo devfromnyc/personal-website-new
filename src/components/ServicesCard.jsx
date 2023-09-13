@@ -14,6 +14,8 @@ const ServicesCard = ({ header, icon, innerText }) => {
           ":hover": {
             backgroundColor: "rgb(51,115,166)",
             color: "#fff",
+            boxShadow:
+              "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
           },
         }}>
         <CardContent

@@ -6,7 +6,7 @@ const Pricing = () => {
   return (
     <Box
       component="section"
-      id="Services"
+      id="Pricing"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -23,7 +23,7 @@ const Pricing = () => {
       </Typography>
       <Divider
         variant="middle"
-        sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 6 }}
+        sx={{ mt: 2, mb: 10, width: "25%", borderColor: "#000" }}
       />
       <Grid
         component="ul"
@@ -51,7 +51,7 @@ const Pricing = () => {
           }}>
           <PricingCard
             header="Basic"
-            price="$300"
+            price="300"
             listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
           />
         </Grid>
@@ -68,7 +68,7 @@ const Pricing = () => {
           }}>
           <PricingCard
             header="Standard"
-            price="$400"
+            price="400"
             listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
           />
         </Grid>
@@ -85,7 +85,7 @@ const Pricing = () => {
           }}>
           <PricingCard
             header="Advanced"
-            price="$500"
+            price="500"
             listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
           />
         </Grid>
