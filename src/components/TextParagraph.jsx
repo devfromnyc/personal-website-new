@@ -33,13 +33,17 @@ const TextParagraph = ({
         />
       )}
       <Typography
-        sx={{ marginTop: 5, maxWidth: "600px", textAlign: `${textAlignment}` }}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+        sx={{
+          marginTop: 5,
+          maxWidth: "700px",
+          fontSize: "20px",
+          textAlign: `${textAlignment}`,
+        }}>
+        I'm a web developer based out of New York City with 6+ years of
+        experience in the field. My mission is to provide a professional web
+        development experience to propel your business or personal aspirations.
+        I possess a variety of skills including modern technologies like MERN
+        stack, React.js, Material UI, & More!
       </Typography>
     </Box>
   );

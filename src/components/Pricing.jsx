@@ -31,7 +31,7 @@ const Pricing = () => {
         spacing={2}
         sx={{
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-start",
           width: "100%",
           maxWidth: "1200px",
           paddingInlineStart: { xs: "20px !important", md: "0px !important" },
@@ -52,7 +52,11 @@ const Pricing = () => {
           <PricingCard
             header="Basic"
             price="300"
-            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+            listItems={[
+              "Static Website/Content",
+              "Hosting set-up",
+              "Free Consult",
+            ]}
           />
         </Grid>
         <Grid
@@ -69,7 +73,12 @@ const Pricing = () => {
           <PricingCard
             header="Standard"
             price="400"
-            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+            listItems={[
+              "All Basic Features",
+              "Dynamic Web Content",
+              "Random",
+              "Lorem Ipsum",
+            ]}
           />
         </Grid>
         <Grid
@@ -86,7 +95,11 @@ const Pricing = () => {
           <PricingCard
             header="Advanced"
             price="500"
-            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+            listItems={[
+              "All Standard Features",
+              "Web app powered by React & Mern Stack",
+              "Post Purchase support!",
+            ]}
           />
         </Grid>
       </Grid>

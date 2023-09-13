@@ -28,25 +28,27 @@ const PricingCard = ({ header, listItems, price }) => {
             textAlign: "center",
           }}>
           <Typography
-            sx={{ fontSize: 32, mb: 2 }}
+            sx={{ fontSize: 32, mb: 0 }}
             variant="h3"
             fontWeight="bold"
             gutterBottom>
             {header}
-            <Typography sx={{ fontSize: "50px", mb: 2, fontWeight: "700" }}>
-              <sup>$</sup>
-              {price}
-            </Typography>
-            <Divider
-              variant="middle"
-              sx={{
-                margin: "0 auto",
-                width: "25%",
-                borderColor: "#000",
-                mb: 4,
-              }}
-            />
           </Typography>
+          <Typography
+            sx={{ fontSize: "50px", mb: 2, fontWeight: "700", lineHeight: 1 }}>
+            <sup>$</sup>
+            {price}
+            <sup>*</sup>
+          </Typography>
+          <Divider
+            variant="middle"
+            sx={{
+              margin: "0 auto",
+              width: "25%",
+              borderColor: "#000",
+              mb: 4,
+            }}
+          />
           <Box component="ul" sx={{ paddingInlineStart: "0px !important" }}>
             {listItems.map((item) => (
               <Box
@@ -62,7 +64,9 @@ const PricingCard = ({ header, listItems, price }) => {
                   sx={{ display: "inline-block", mr: 2 }}>
                   &#10003;
                 </Typography>
-                <Typography component="span">{item}</Typography>
+                <Typography component="span" textAlign="left">
+                  {item}
+                </Typography>
               </Box>
             ))}
           </Box>

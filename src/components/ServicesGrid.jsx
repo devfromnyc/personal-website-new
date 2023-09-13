@@ -34,7 +34,7 @@ const ServicesGrid = () => {
         spacing={2}
         sx={{
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-start",
           width: { xs: "auto", lg: "70%" },
           paddingInlineStart: { xs: "20px !important", md: "0px !important" },
         }}>
@@ -54,7 +54,7 @@ const ServicesGrid = () => {
             header="Web Development"
             icon={developmentIcon}
             innerText={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+              "A general service that covers personal websites and web projects that do not fall under the category of e-commerce. This can be anything from a portfolio website to a custom utility web application!"
             }
           />
         </Grid>
@@ -73,7 +73,7 @@ const ServicesGrid = () => {
             header="Shopify Development"
             icon={shopifyIcon}
             innerText={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+              "This service covers any and all things Shopify! Whether you want a new online store or a theme extension, I've got you covered! I can also build re-usable components and custom landing pages for your store!"
             }
           />
         </Grid>
@@ -92,7 +92,7 @@ const ServicesGrid = () => {
             header="Freelancing/Contract"
             icon={freelanceIcon}
             innerText={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Fusce id velit ut tortor."
+              "I'm available for hire as a freelancer or on a contract basis to handle your Shopify and/or general web development needs!"
             }
           />
         </Grid>

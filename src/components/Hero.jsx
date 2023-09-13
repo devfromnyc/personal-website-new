@@ -4,13 +4,6 @@ import { Typography, Button } from "@mui/material";
 
 // Images
 
-// https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80
-// https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80
-// https://images.unsplash.com/photo-1619597455322-4fbbd820250a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
-// https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80
-// https://images.unsplash.com/photo-1595327656903-2f54e37ce09b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80
-// https://images.unsplash.com/photo-1554078140-01f553ad4d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80
-
 // Pallettes
 // https://www.color-hex.com/color-palette/993
 // https://www.color-hex.com/color-palette/28549
@@ -45,14 +38,25 @@ const Hero = () => {
         variant="h1"
         color="#fff"
         textAlign="center"
-        sx={{ fontWeight: 700, textShadow: "2px 2px black" }}>
+        sx={{
+          fontSize: "140px",
+          fontWeight: 700,
+          textShadow: "2px 2px black",
+        }}>
         Hello! I'm James
       </Typography>
       <Typography
         color="#fff"
         textAlign="center"
-        sx={{ textShadow: "1px 1px black" }}>
-        Bringing a different approach to modern ecommerce and web development
+        sx={{
+          fontSize: "28px",
+          textShadow: "1px 1px black",
+          maxWidth: "800px",
+          lineHeight: 1.1,
+        }}>
+        Bringing the power of modern web development right to you! With a
+        variety of flexible services and packages available, I'm your one-stop
+        solution that will satisfy your budget and project requirements!
       </Typography>
       <Box
         sx={{

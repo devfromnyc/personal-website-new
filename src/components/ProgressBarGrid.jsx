@@ -36,7 +36,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">HTML</Typography>
-          <ProgressBar maxValue={60} />
+          <ProgressBar maxValue={100} />
         </Grid>
         <Grid
           component="li"
@@ -48,7 +48,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">CSS</Typography>
-          <ProgressBar maxValue={70} />
+          <ProgressBar maxValue={100} />
         </Grid>
         <Grid
           component="li"
@@ -72,7 +72,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">Nodejs</Typography>
-          <ProgressBar maxValue={90} />
+          <ProgressBar maxValue={80} />
         </Grid>
         <Grid
           component="li"
@@ -84,7 +84,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">React</Typography>
-          <ProgressBar maxValue={90} />
+          <ProgressBar maxValue={70} />
         </Grid>
         <Grid
           component="li"
@@ -96,7 +96,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">Material UI</Typography>
-          <ProgressBar maxValue={90} />
+          <ProgressBar maxValue={60} />
         </Grid>
         <Grid
           component="li"
@@ -108,7 +108,7 @@ const ProgressBarGrid = () => {
             alignItems: "flex-start",
           }}>
           <Typography fontWeight="600">MERN Stack</Typography>
-          <ProgressBar maxValue={90} />
+          <ProgressBar maxValue={70} />
         </Grid>
       </Grid>
     </Box>
