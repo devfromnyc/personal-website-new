@@ -1,5 +1,6 @@
-import * as React from "react";
-import { Box, Typography, Divider } from "@mui/material";
+import React from "react";
+import PricingCard from "./PricingCard";
+import { Box, Grid, Typography, Divider } from "@mui/material";
 
 const Pricing = () => {
   return (
@@ -24,6 +25,71 @@ const Pricing = () => {
         variant="middle"
         sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 6 }}
       />
+      <Grid
+        component="ul"
+        container
+        spacing={2}
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          maxWidth: "1200px",
+          paddingInlineStart: { xs: "20px !important", md: "0px !important" },
+        }}>
+        <Grid
+          component="li"
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            width: "100%",
+            paddingLeft: "0px !important",
+          }}>
+          <PricingCard
+            header="Basic"
+            price="$300"
+            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+          />
+        </Grid>
+        <Grid
+          component="li"
+          item
+          xs={12}
+          sm={4}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingLeft: "0px !important",
+          }}>
+          <PricingCard
+            header="Standard"
+            price="$400"
+            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+          />
+        </Grid>
+        <Grid
+          component="li"
+          item
+          xs={12}
+          sm={4}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingLeft: "0px !important",
+          }}>
+          <PricingCard
+            header="Advanced"
+            price="$500"
+            listItems={["Hello", "World", "Random", "Lorem Ipsum"]}
+          />
+        </Grid>
+      </Grid>
     </Box>
   );
 };
