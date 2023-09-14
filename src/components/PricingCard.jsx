@@ -36,6 +36,7 @@ const PricingCard = ({ header, listItems, price }) => {
           sx={{
             borderRadius: 2,
             py: 4,
+            height: "350px",
             boxShadow:
               "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
             transition: "all 0.4s ease 0s",
@@ -83,11 +84,19 @@ const PricingCard = ({ header, listItems, price }) => {
                     display: "flex",
                     justifyContent: "flex-start",
                     listStyle: "none",
+                    mb: 2
                   }}
                 >
                   <Typography
                     component="span"
-                    sx={{ display: "inline-block", mr: 2 }}
+                    sx={{
+                      display: "inline-block",
+                      mr: 2,
+                      border: "1.5px solid #000",
+                      borderRadius: "40px",
+                      maxHeight: "25px",
+                      padding: "0 6px",
+                    }}
                   >
                     &#10003;
                   </Typography>
