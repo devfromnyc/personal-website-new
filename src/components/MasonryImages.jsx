@@ -69,7 +69,8 @@ const MasonryImages = () => {
         textAlign: "center",
         width: "100%",
         backgroundColor: "#fff",
-      }}>
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -79,7 +80,8 @@ const MasonryImages = () => {
           width: "100%",
           backgroundColor: "rgb(54,57,62)",
           py: { xs: 8, sm: 14, md: 20 },
-        }}>
+        }}
+      >
         <Typography variant="h2">Portfolio</Typography>
         <Divider
           variant="middle"
@@ -98,7 +100,8 @@ const MasonryImages = () => {
           overflowY: "auto",
           position: "relative",
           zIndex: "10",
-        }}>
+        }}
+      >
         <ImageList variant="masonry" cols={2} gap={8} sx={{ width: "100%" }}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>

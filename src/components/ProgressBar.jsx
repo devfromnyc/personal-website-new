@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { fadeLeft } from "../hooks/AnimationOptions";
 
 function LinearProgressWithLabel(props) {
   return (
@@ -17,7 +20,8 @@ function LinearProgressWithLabel(props) {
           "& span.MuiLinearProgress-bar": {
             backgroundColor: "rgb(51,115,166)",
           },
-        }}>
+        }}
+      >
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box sx={{ minWidth: 35 }}>
@@ -51,13 +55,32 @@ const ProgressBar = ({ maxValue }) => {
       clearInterval(timer);
     };
   }, [progress]);
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <Box
       sx={{
         width: "100%",
         maxWidth: "600px",
-      }}>
-      <LinearProgressWithLabel value={progress} sx={{ height: "8px" }} />
+      }}
+    >
+      <motion.div
+        className="slide-left"
+        ref={ref}
+        variants={fadeLeft}
+        initial="hidden"
+        animate={control}
+      >
+        <LinearProgressWithLabel value={progress} sx={{ height: "8px" }} />
+      </motion.div>
     </Box>
   );
 };
