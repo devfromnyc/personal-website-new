@@ -1,6 +1,10 @@
 import * as React from "react";
 import { Box } from "@mui/material";
 import { Typography, Button } from "@mui/material";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { fadeUp, fadeIn, perspective } from "../hooks/AnimationOptions";
 
 // Images
 
@@ -11,6 +15,16 @@ import { Typography, Button } from "@mui/material";
 const Hero = () => {
   const imageURL =
     "https://images.unsplash.com/photo-1554078140-01f553ad4d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80";
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
   return (
     <Box
       display="flex"
@@ -19,7 +33,8 @@ const Hero = () => {
       alignItems="center"
       component="section"
       id="Home"
-      sx={{ height: "100vh", width: "100%" }}>
+      sx={{ height: "100vh", width: "100%" }}
+    >
       <Box
         component="div"
         sx={{
@@ -34,30 +49,48 @@ const Hero = () => {
           zIndex: "-1",
         }}
       />
-      <Typography
-        variant="h1"
-        color="#fff"
-        textAlign="center"
-        sx={{
-          fontSize: "140px",
-          fontWeight: 700,
-          textShadow: "2px 2px black",
-        }}>
-        Hello! I'm James
-      </Typography>
-      <Typography
-        color="#fff"
-        textAlign="center"
-        sx={{
-          fontSize: "28px",
-          textShadow: "1px 1px black",
-          maxWidth: "800px",
-          lineHeight: 1.1,
-        }}>
-        Bringing the power of modern web development right to you! With a
-        variety of flexible services and packages available, I'm your one-stop
-        solution that will satisfy your budget and project requirements!
-      </Typography>
+      <motion.div
+        className="slide-up"
+        ref={ref}
+        variants={fadeUp}
+        initial="hidden"
+        animate={control}
+      >
+        <Typography
+          variant="h1"
+          color="#fff"
+          textAlign="center"
+          sx={{
+            fontSize: "140px",
+            fontWeight: 700,
+            textShadow: "2px 2px black",
+          }}
+        >
+          Hello! I'm James
+        </Typography>
+      </motion.div>
+      <motion.div
+        className="slide-up"
+        ref={ref}
+        variants={fadeUp}
+        initial="hidden"
+        animate={control}
+      >
+        <Typography
+          color="#fff"
+          textAlign="center"
+          sx={{
+            fontSize: "28px",
+            textShadow: "1px 1px black",
+            maxWidth: "800px",
+            lineHeight: 1.1,
+          }}
+        >
+          Bringing the power of modern web development right to you! With a
+          variety of flexible services and packages available, I'm your one-stop
+          solution that will satisfy your budget and project requirements!
+        </Typography>
+      </motion.div>
       <Box
         sx={{
           display: "flex",
@@ -65,43 +98,62 @@ const Hero = () => {
           alignItems: "center",
           flexDirection: { xs: "column", sm: "row" },
           mt: 4,
-        }}>
-        <Button
-          variant="contained"
-          sx={{
-            mr: { xs: "0px", sm: 4 },
-            mb: { xs: 4, sm: 0 },
-            backgroundColor: "transparent",
-            border: "2px solid #fff",
-            textShadow: "1px 1px black",
-            px: 8,
-            py: 2,
-            ":hover": {
-              backgroundColor: "rgb(51,115,166)",
-              borderColor: "rgb(51,115,166)",
-            },
-            ":focus:": {
-              backgroundColor: "rgb(51,115,166)",
-              borderColor: "rgb(51,115,166)",
-            },
-          }}>
-          About Me
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "transparent",
-            border: "2px solid #fff",
-            px: 8,
-            py: 2,
-            textShadow: "1px 1px black",
-            ":hover": {
-              backgroundColor: "rgb(51,115,166)",
-              borderColor: "rgb(51,115,166)",
-            },
-          }}>
-          Portfolio
-        </Button>
+        }}
+      >
+        <motion.div
+          className="slide-in"
+          ref={ref}
+          variants={fadeIn}
+          initial="hidden"
+          animate={control}
+        >
+          <Button
+            variant="contained"
+            sx={{
+              mr: { xs: "0px", sm: 4 },
+              mb: { xs: 4, sm: 0 },
+              backgroundColor: "transparent",
+              border: "2px solid #fff",
+              textShadow: "1px 1px black",
+              px: 8,
+              py: 2,
+              ":hover": {
+                backgroundColor: "rgb(51,115,166)",
+                borderColor: "rgb(51,115,166)",
+              },
+              ":focus:": {
+                backgroundColor: "rgb(51,115,166)",
+                borderColor: "rgb(51,115,166)",
+              },
+            }}
+          >
+            About Me
+          </Button>
+        </motion.div>
+        <motion.div
+          className="slide-in"
+          ref={ref}
+          variants={fadeIn}
+          initial="hidden"
+          animate={control}
+        >
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "transparent",
+              border: "2px solid #fff",
+              px: 8,
+              py: 2,
+              textShadow: "1px 1px black",
+              ":hover": {
+                backgroundColor: "rgb(51,115,166)",
+                borderColor: "rgb(51,115,166)",
+              },
+            }}
+          >
+            Portfolio
+          </Button>
+        </motion.div>
       </Box>
     </Box>
   );

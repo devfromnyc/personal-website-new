@@ -3,6 +3,7 @@ import { Box, Typography, Divider } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { fadeUp } from "../hooks/AnimationOptions";
 
 const TextParagraph = ({
   variant,
@@ -12,15 +13,6 @@ const TextParagraph = ({
   header,
   sectionId,
 }) => {
-  const elementOptions = {
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transform: "translateX(0px)",
-      transition: { duration: 0.5 },
-    },
-    hidden: { opacity: 0, scale: 0, transform: "translateY(100px)" },
-  };
   const control = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -47,7 +39,7 @@ const TextParagraph = ({
       <motion.div
         className="slide-up"
         ref={ref}
-        variants={elementOptions}
+        variants={fadeUp}
         initial="hidden"
         animate={control}
       >
@@ -58,17 +50,17 @@ const TextParagraph = ({
         >
           {header}
         </Typography>
+        {renderDivider && (
+          <Divider
+            variant="middle"
+            sx={{ mt: 2, ml: 0, width: "100%", borderColor: "#fff" }}
+          />
+        )}
       </motion.div>
-      {renderDivider && (
-        <Divider
-          variant="middle"
-          sx={{ mt: 2, width: "25%", borderColor: "#fff" }}
-        />
-      )}
       <motion.div
         className="slide-up"
         ref={ref}
-        variants={elementOptions}
+        variants={fadeUp}
         initial="hidden"
         animate={control}
       >
