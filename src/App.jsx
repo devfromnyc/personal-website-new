@@ -11,14 +11,6 @@ import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 const theme = createTheme({
-  components: {
-    MuiInoutBase: {
-      defaultProps: {
-        // Needed to rpevent adding a global style for every input field
-        disableInjectingGlobalStyles: true,
-      },
-    },
-  },
   typography: {
     fontFamily: "Ysabeau SC, sans-serif",
   },
