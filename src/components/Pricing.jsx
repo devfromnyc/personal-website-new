@@ -98,6 +98,7 @@ const Pricing = () => {
             listItems={[
               "All Standard Features",
               "Web app powered by React & Mern Stack",
+              "Custom Database",
               "Post Purchase support!",
             ]}
           />

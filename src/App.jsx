@@ -11,6 +11,14 @@ import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 
 const theme = createTheme({
+  components: {
+    MuiInoutBase: {
+      defaultProps: {
+        // Needed to rpevent adding a global style for every input field
+        disableInjectingGlobalStyles: true,
+      },
+    },
+  },
   typography: {
     fontFamily: "Ysabeau SC, sans-serif",
   },
@@ -25,6 +33,11 @@ function App() {
         <TextParagraph
           variant="h2"
           textAlignment="center"
+          textContent="I'm a web developer based out of New York City with 6+ years of
+          experience in the field. My mission is to provide a professional web
+          development experience to propel your business or personal aspirations.
+          I possess a variety of skills including modern technologies like MERN
+          stack, React.js, Material UI, & More!"
           header="About Me"
           sectionId="About"
           renderDivider

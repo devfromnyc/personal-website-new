@@ -4,6 +4,7 @@ import { Box, Typography, Divider } from "@mui/material";
 const TextParagraph = ({
   variant,
   textAlignment,
+  textContent,
   renderDivider,
   header,
   sectionId,
@@ -23,6 +24,7 @@ const TextParagraph = ({
       }}>
       <Typography
         variant={variant}
+        className="slide-up"
         sx={{ textAlign: `${textAlignment}`, fontWeight: "700" }}>
         {header}
       </Typography>
@@ -39,11 +41,7 @@ const TextParagraph = ({
           fontSize: "20px",
           textAlign: `${textAlignment}`,
         }}>
-        I'm a web developer based out of New York City with 6+ years of
-        experience in the field. My mission is to provide a professional web
-        development experience to propel your business or personal aspirations.
-        I possess a variety of skills including modern technologies like MERN
-        stack, React.js, Material UI, & More!
+        {textContent}
       </Typography>
     </Box>
   );
