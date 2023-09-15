@@ -32,7 +32,7 @@ const ServicesCard = ({ header, icon, innerText }) => {
             py: 4,
             transition: "all 0.4s ease 0s",
             ":hover": {
-              backgroundColor: "rgb(51,115,166)",
+              backgroundColor: "rgb(133, 105, 65)",
               color: "#fff",
               boxShadow:
                 "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",

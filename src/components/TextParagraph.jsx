@@ -33,7 +33,7 @@ const TextParagraph = ({
         alignItems: "center",
         width: "100%",
         py: 12,
-        backgroundColor: "rgb(54,57,62)",
+        backgroundColor: "rgb(133,105,65)",
       }}
     >
       <motion.div

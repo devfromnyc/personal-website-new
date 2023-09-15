@@ -4,17 +4,15 @@ import { Typography, Button } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { fadeUp, fadeIn, perspective } from "../hooks/AnimationOptions";
-
-// Images
+import { fadeUp, fadeIn } from "../hooks/AnimationOptions";
 
 // Pallettes
-// https://www.color-hex.com/color-palette/993
-// https://www.color-hex.com/color-palette/28549
-// https://www.color-hex.com/color-palette/64550
+// https://www.color-hex.com/color-palette/7395
+// https://www.color-hex.com/color-palette/8630
+
 const Hero = () => {
   const imageURL =
-    "https://images.unsplash.com/photo-1554078140-01f553ad4d40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80";
+    "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
 
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -41,7 +39,7 @@ const Hero = () => {
           position: "absolute",
           height: "100%",
           width: "100%",
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${imageURL})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${imageURL})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRFepeat: "no-repeat",
@@ -118,12 +116,12 @@ const Hero = () => {
               px: 8,
               py: 2,
               ":hover": {
-                backgroundColor: "rgb(51,115,166)",
-                borderColor: "rgb(51,115,166)",
+                backgroundColor: "rgb(133, 105, 65)",
+                borderColor: "rgb(133, 105, 65)",
               },
               ":focus:": {
-                backgroundColor: "rgb(51,115,166)",
-                borderColor: "rgb(51,115,166)",
+                backgroundColor: "rgb(133, 105, 65)",
+                borderColor: "rgb(133, 105, 65)",
               },
             }}
           >
@@ -146,8 +144,8 @@ const Hero = () => {
               py: 2,
               textShadow: "1px 1px black",
               ":hover": {
-                backgroundColor: "rgb(51,115,166)",
-                borderColor: "rgb(51,115,166)",
+                backgroundColor: "rgb(133, 105, 65)",
+                borderColor: "rgb(133, 105, 65)",
               },
             }}
           >

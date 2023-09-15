@@ -12,9 +12,10 @@ const ProgressBarGrid = () => {
         alignItems: "center",
         width: "100%",
         flexGrow: 1,
-        backgroundColor: "rgb(54,57,62)",
+        backgroundColor: "rgb(133,105,65)",
         pb: 20,
-      }}>
+      }}
+    >
       <Grid
         component="ul"
         container
@@ -25,7 +26,8 @@ const ProgressBarGrid = () => {
             md: "70%",
           },
           paddingInlineStart: { xs: "20px !important", md: "0px !important" },
-        }}>
+        }}
+      >
         <Grid
           component="li"
           item
@@ -34,7 +36,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">HTML</Typography>
           <ProgressBar maxValue={100} />
         </Grid>
@@ -46,7 +49,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">CSS</Typography>
           <ProgressBar maxValue={100} />
         </Grid>
@@ -58,7 +62,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">Javascript</Typography>
           <ProgressBar maxValue={80} />
         </Grid>
@@ -70,7 +75,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">Nodejs</Typography>
           <ProgressBar maxValue={80} />
         </Grid>
@@ -82,7 +88,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">React</Typography>
           <ProgressBar maxValue={70} />
         </Grid>
@@ -94,7 +101,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">Material UI</Typography>
           <ProgressBar maxValue={60} />
         </Grid>
@@ -106,7 +114,8 @@ const ProgressBarGrid = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-          }}>
+          }}
+        >
           <Typography fontWeight="600">MERN Stack</Typography>
           <ProgressBar maxValue={70} />
         </Grid>

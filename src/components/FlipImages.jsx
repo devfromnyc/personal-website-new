@@ -40,7 +40,7 @@ const FlipImages = () => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          backgroundColor: "rgb(54,57,62)",
+          backgroundColor: "rgb(44,46,45)",
           py: { xs: 8, sm: 14, lg: 20 },
         }}
       >

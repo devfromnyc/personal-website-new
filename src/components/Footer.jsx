@@ -19,9 +19,10 @@ const Footer = () => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        backgroundColor: "rgb(54,57,62)",
+        backgroundColor: "rgb(44,46,45)",
         py: 18,
-      }}>
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -29,7 +30,8 @@ const Footer = () => {
           alignItems: "center",
           width: "100%",
           maxWidth: { xs: "95%", sm: "90%", md: "80%", lg: "70%" },
-        }}>
+        }}
+      >
         <Box
           component="nav"
           sx={{
@@ -38,7 +40,8 @@ const Footer = () => {
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
-          }}>
+          }}
+        >
           <Typography variant="h3" sx={{ fontSize: "28px" }}>
             James Jannetti
           </Typography>
@@ -51,16 +54,19 @@ const Footer = () => {
               mt: 1,
               mb: 0,
               width: "500px",
-            }}>
+            }}
+          >
             {footerMenu.map((menuItem) => (
               <Box
                 component="li"
                 key={menuItem}
-                sx={{ display: "inline-block", listStyle: "none" }}>
+                sx={{ display: "inline-block", listStyle: "none" }}
+              >
                 <Link
                   href={"#" + menuItem}
                   underline="hover"
-                  sx={{ color: "#fff", fontSize: "20px" }}>
+                  sx={{ color: "#fff", fontSize: "20px" }}
+                >
                   {menuItem}
                 </Link>
               </Box>
@@ -72,7 +78,8 @@ const Footer = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               width: "170px",
-            }}>
+            }}
+          >
             {footerIcons.map((icon) => (
               <Link href="#" key={icon}>
                 <img src={icon} alt="Footer Icon" className="footer-icon" />

@@ -18,7 +18,7 @@ function LinearProgressWithLabel(props) {
           backgroundColor: "#fff",
           "& span.MuiLinearProgress-root": { backgroundColor: "#fff" },
           "& span.MuiLinearProgress-bar": {
-            backgroundColor: "rgb(51,115,166)",
+            backgroundColor: "rgb(44,46,45)",
           },
         }}
       >

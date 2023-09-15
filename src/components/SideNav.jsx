@@ -34,19 +34,25 @@ const SideNav = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+        backgroundColor: "rgb(133,105,65)",
+        height: "100%",
+      }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}>
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
       <List sx={{ position: "relative" }}>
-        {["Home", "About", "Portfolio", "Pricing", "Contact", "Exit"].map(
+        {["Home", "About", "Services", "Portfolio", "Contact", "Exit"].map(
           (text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton
                 component="a"
                 role="link"
-                href={text !== "Exit" ? `#` + text : "#"}>
-                <ListItemIcon>
+                href={text !== "Exit" ? `#` + text : "#"}
+              >
+                <ListItemIcon sx={{ color: "#fff" }}>
                   {text == "Home" ? (
                     <HomeIcon />
                   ) : text == "Portfolio" ? (
@@ -61,7 +67,7 @@ const SideNav = () => {
                     <CloseIcon />
                   )}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} sx={{ color: "#fff" }} />
               </ListItemButton>
             </ListItem>
           )
@@ -70,17 +76,18 @@ const SideNav = () => {
     </Box>
   );
   return (
-    <React.Fragment>
+    <Box>
       <Button onClick={toggleDrawer("left", true)} id="sidenav-trigger">
         <MenuIcon sx={{ color: "#fff" }} />
       </Button>
       <Drawer
         anchor="left"
         open={openSideNav["left"]}
-        onClose={toggleDrawer("left", false)}>
+        onClose={toggleDrawer("left", false)}
+      >
         {list("left")}
       </Drawer>
-    </React.Fragment>
+    </Box>
   );
 };
 

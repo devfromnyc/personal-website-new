@@ -9,10 +9,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
-
 import SideNav from "./SideNav";
 
-const pages = ["Home", "About", "Portfolio", "Pricing", "Contact"];
+const pages = ["Home", "About", "Services", "Portfolio", "Contact"];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -40,7 +39,8 @@ function NavBar() {
               color: "inherit",
               textDecoration: "none",
               textShadow: "1px 1px black",
-            }}>
+            }}
+          >
             James Jannetti
           </Typography>
 
@@ -62,7 +62,8 @@ function NavBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
-              }}>
+              }}
+            >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
@@ -87,7 +88,8 @@ function NavBar() {
               color: "inherit",
               textDecoration: "none",
               textShadow: "1px 1px black",
-            }}>
+            }}
+          >
             James Jannetti
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -102,7 +104,8 @@ function NavBar() {
                   color: "white",
                   display: "block",
                   textShadow: "1px 1px black",
-                }}>
+                }}
+              >
                 {page}
               </Button>
             ))}

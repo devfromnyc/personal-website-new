@@ -5,7 +5,6 @@ import TextParagraph from "./components/TextParagraph";
 import ProgressBarGrid from "./components/ProgressBarGrid";
 import ServicesGrid from "./components/ServicesGrid";
 import FlipImages from "./components/FlipImages";
-import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
@@ -36,7 +35,6 @@ function App() {
         />
         <ProgressBarGrid />
         <ServicesGrid />
-        <Pricing />
         <FlipImages />
         <Footer />
       </Box>
