@@ -57,7 +57,7 @@ const SideNav = () => {
                     <HomeIcon />
                   ) : text == "Portfolio" ? (
                     <LibraryBooksIcon />
-                  ) : text == "Resume" ? (
+                  ) : text == "Services" ? (
                     <FilePresentIcon />
                   ) : text == "Contact" ? (
                     <PhoneIcon />
