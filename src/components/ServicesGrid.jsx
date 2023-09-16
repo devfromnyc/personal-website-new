@@ -1,12 +1,16 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
-import { Box, Grid, Typography, Divider } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import ImageParagraph from "./ImageParagraph";
-import shopifyIcon from "../assets/money-bag.gif";
-import developmentIcon from "../assets/html.gif";
-import freelanceIcon from "../assets/success.gif";
 
-const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
+const ServicesGrid = ({
+  header,
+  paragraphText,
+  mainImage,
+  direction,
+  mobileDirection,
+  icons,
+}) => {
   return (
     <Box
       component="section"
@@ -23,18 +27,12 @@ const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
         py: 12,
       }}
     >
-      <Typography variant="h2" sx={{ fontWeight: "700" }}>
-        What I Do
-      </Typography>
-      <Divider
-        variant="middle"
-        sx={{ mt: 2, width: "25%", borderColor: "#000", mb: 6 }}
-      />
       <ImageParagraph
         header={header}
         paragraphText={paragraphText}
         mainImage={mainImage}
         direction={direction}
+        mobileDirection={mobileDirection}
       />
       <Grid
         component="ul"
@@ -51,7 +49,8 @@ const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
           component="li"
           item
           xs={12}
-          sm={4}
+          sm={6}
+          md={4}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -61,18 +60,18 @@ const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
           }}
         >
           <ServicesCard
-            header="Web Development"
-            icon={developmentIcon}
-            innerText={
-              "A general service that covers personal websites and web projects that do not fall under the category of e-commerce. This can be anything from a portfolio website to a custom utility web application!"
-            }
+            header={icons[0].alt}
+            icon={icons[0].src}
+            alt={icons[0].alt}
+            innerText={icons[0].innerText}
           />
         </Grid>
         <Grid
           component="li"
           item
           xs={12}
-          sm={4}
+          sm={6}
+          md={4}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -81,18 +80,18 @@ const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
           }}
         >
           <ServicesCard
-            header="Shopify Development"
-            icon={shopifyIcon}
-            innerText={
-              "This service covers any and all things Shopify! Whether you want a new online store or a theme extension, I've got you covered! I can also build re-usable components and custom landing pages for your store!"
-            }
+            header={icons[1].alt}
+            icon={icons[1].src}
+            alt={icons[1].alt}
+            innerText={icons[1].innerText}
           />
         </Grid>
         <Grid
           component="li"
           item
           xs={12}
-          sm={4}
+          sm={6}
+          md={4}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -101,11 +100,10 @@ const ServicesGrid = ({ header, paragraphText, mainImage, direction }) => {
           }}
         >
           <ServicesCard
-            header="Freelancing/Contract"
-            icon={freelanceIcon}
-            innerText={
-              "I'm available for hire as a freelancer or on a contract basis to handle your Shopify and/or general web development needs!"
-            }
+            header={icons[2].alt}
+            icon={icons[2].src}
+            alt={icons[2].alt}
+            innerText={icons[2].innerText}
           />
         </Grid>
       </Grid>

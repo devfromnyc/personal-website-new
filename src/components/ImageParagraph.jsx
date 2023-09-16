@@ -6,22 +6,25 @@ const ImageTextParagraph = ({
   paragraphText,
   mainImage,
   direction,
+  mobileDirection,
 }) => {
+  const margin = { xs: 0, md: 4, lg: 12 };
+
   return (
     <Box
       component="section"
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", lg: `${direction}` },
+        flexDirection: { xs: `${mobileDirection}`, md: `${direction}` },
         justifyContent: "center",
-        alignItems: "flex-start",
+        alignItems: { xs: "center", md: "flex-start" },
         width: "100%",
         pt: 10,
         pb: 10,
       }}
     >
       <Box
-        sx={{ width: { xs: "90%", md: "80%", lg: "50%" }, maxWidth: "600px" }}
+        sx={{ width: { xs: "85%", md: "60%", lg: "50%" }, maxWidth: "600px" }}
       >
         <img src={mainImage.src} alt={mainImage.alt} className="services-img" />
       </Box>
@@ -29,16 +32,16 @@ const ImageTextParagraph = ({
         sx={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "flex-start",
+          alignItems: { xs: "center", lg: "flex-start" },
           flexDirection: "column",
           color: "#000",
           textAlign: "left",
-          ml: { xs: 0, md: 4, lg: 12 },
+          margin: margin,
         }}
       >
         <Typography variant="h3">{header}</Typography>
         <Typography
-          sx={{ maxWidth: { xs: "300px", md: "400px", lg: "500px" }, mt: 2 }}
+          sx={{ maxWidth: { xs: "600px", md: "400px", lg: "500px" }, mt: 2 }}
         >
           {paragraphText}
         </Typography>
