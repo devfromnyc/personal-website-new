@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import TextParagraph from "./components/TextParagraph";
 import ProgressBarGrid from "./components/ProgressBarGrid";
-import ServicesGrid from "./components/ServicesGrid";
+import ServicesContainer from "./components/ServicesContainer";
 import FlipImages from "./components/FlipImages";
 import Footer from "./components/Footer";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
@@ -34,7 +34,7 @@ function App() {
           renderDivider
         />
         <ProgressBarGrid />
-        <ServicesGrid />
+        <ServicesContainer />
         <FlipImages />
         <Footer />
       </Box>
