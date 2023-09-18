@@ -9,7 +9,7 @@ import pagesIcon from "../assets/schedule.gif";
 import databaseIcon from "../assets/database.gif";
 import clockIcon from "../assets/speedometer.gif";
 import promoIcon from "../assets/black-friday.gif";
-import clipboardIcon from "../assets/clipboard.gif";
+import accessibilityIcon from "../assets/wheelchair.gif";
 
 const ServicesContainer = () => {
   return (
@@ -72,11 +72,7 @@ const ServicesContainer = () => {
       />
       <ServicesGrid
         header="Shopify Customizations"
-        paragraphText="I'm a web developer based out of New York City with 6+ years of
-          experience in the field. My mission is to provide a professional web
-          development experience to propel your business or personal aspirations.
-          I possess a variety of skills including modern technologies like MERN
-          stack, React.js, Material UI, & More!"
+        paragraphText="This service covers any and all things Shopify! Shopify is a very powerful ecommerce tool that helps business thrive! Let me help you get the best out of your Shopify store with a variety of different Shopify related services including building custom components, landing pages, & third party app integrations!"
         mainImage={{
           src:
             "https://images.unsplash.com/photo-1586880244543-0528a802be97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -89,29 +85,25 @@ const ServicesContainer = () => {
             src: layersIcon,
             alt: "Custom Components",
             innerText:
-              "This service covers any and all things Shopify! Whether you want a new online store or a theme extension, I've got you covered! I can also build re-usable components and custom landing pages for your store!",
+              "Custom Shopify components are additional pieces of reusable conent that extend your theme's store building capabilities. You can tweak them in the customize area in the same way as any default theme section!",
           },
           {
             src: pagesIcon,
             alt: "Landing Pages",
             innerText:
-              "A general service that covers personal websites and web projects that do not fall under the category of e-commerce. This can be anything from a portfolio website to a custom utility web application!",
+              "Need assistance in building custom landing pages and page templates? These tools are an excellent way to diversify your store's web content and user engagement",
           },
           {
             src: apiIcon,
             alt: "App Integrations",
             innerText:
-              "I'm available for hire as a freelancer or on a contract basis to handle your Shopify and/or general web development needs!",
+              "Thid party apps are a great way to greatly extend the functionality of your store, however, sometimes it can be scary installing a new app, Let me help!",
           },
         ]}
       />
       <ServicesGrid
         header="Freelancing/For Hire"
-        paragraphText="I'm a web developer based out of New York City with 6+ years of
-          experience in the field. My mission is to provide a professional web
-          development experience to propel your business or personal aspirations.
-          I possess a variety of skills including modern technologies like MERN
-          stack, React.js, Material UI, & More!"
+        paragraphText="Need a developer for a project sprint or a fixed amount of time to compliment your development resources? I'm open to accepting contracts for development work or to be brought on a as a full-time employee!"
         mainImage={{
           src:
             "https://images.unsplash.com/photo-1589362281138-e3f7ebe47f1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -121,22 +113,22 @@ const ServicesContainer = () => {
         mobileDirection="column"
         icons={[
           {
-            src: clipboardIcon,
-            alt: "Contract/Large Projects",
-            innerText:
-              "This service covers any and all things Shopify! Whether you want a new online store or a theme extension, I've got you covered! I can also build re-usable components and custom landing pages for your store!",
-          },
-          {
             src: promoIcon,
             alt: "Seasonal",
             innerText:
-              "A general service that covers personal websites and web projects that do not fall under the category of e-commerce. This can be anything from a portfolio website to a custom utility web application!",
+              "Holiday seasons putting a strain on your development resources? I'm available to assist on projects and any development work during these promotional periods",
           },
           {
             src: clockIcon,
             alt: "TimeZone Flexible",
             innerText:
-              "I'm available for hire as a freelancer or on a contract basis to handle your Shopify and/or general web development needs!",
+              "While I'm stationed on EST/ET, I am able to work in many different time zones including all timezones active in the United States",
+          },
+          {
+            src: accessibilityIcon,
+            alt: "Accessibility and Optimization",
+            innerText:
+              "Now more than ever, having an accessible website that is optimized for speed and efficiency is extremely important to your success. I offer consultations/services related to web accessibility and web optimization",
           },
         ]}
       />
