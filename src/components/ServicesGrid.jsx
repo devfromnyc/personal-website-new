@@ -24,7 +24,7 @@ const ServicesGrid = ({
         textAlign: "center",
         backgroundColor: "#fff",
         color: "#000",
-        py: 12,
+        pb: 12,
       }}
     >
       <ImageParagraph
