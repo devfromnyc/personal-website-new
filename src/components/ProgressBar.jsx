@@ -58,11 +58,16 @@ const ProgressBar = ({ maxValue }) => {
 
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
+    if (!animated) {
+      if (inView) {
+        control.start("visible");
+        setAnimated(true);
+      } else {
+        control.start("hidden");
+        setAnimated(false);
+      }
     }
   }, [control, inView]);
   return (

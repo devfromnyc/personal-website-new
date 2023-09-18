@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Box, Typography, Card, CardContent } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -8,11 +9,16 @@ import { fadeIn } from "../hooks/AnimationOptions";
 const ServicesCard = ({ header, icon, innerText }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
+    if (!animated) {
+      if (inView) {
+        control.start("visible");
+        setAnimated(true);
+      } else {
+        control.start("hidden");
+        setAnimated(false);
+      }
     }
   }, [control, inView]);
   return (

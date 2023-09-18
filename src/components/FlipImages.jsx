@@ -4,18 +4,23 @@ import { ImageList, ImageListItem } from "@mui/material";
 import { Typography, Divider } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fadeLeft } from "../hooks/AnimationOptions";
 import flipData from "../data/FlipCardData";
 
 const FlipImages = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
+    if (!animated) {
+      if (inView) {
+        control.start("visible");
+        setAnimated(true);
+      } else {
+        control.start("hidden");
+        setAnimated(false);
+      }
     }
   }, [control, inView]);
   return (

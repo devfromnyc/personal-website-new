@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { Box } from "@mui/material";
 import { Typography, Button } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
@@ -16,11 +17,16 @@ const Hero = () => {
 
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
+    if (!animated) {
+      if (inView) {
+        control.start("visible");
+        setAnimated(true);
+      } else {
+        control.start("hidden");
+        setAnimated(false);
+      }
     }
   }, [control, inView]);
   return (
@@ -59,7 +65,12 @@ const Hero = () => {
           color="#fff"
           textAlign="center"
           sx={{
-            fontSize: "140px",
+            fontSize: {
+              xs: "50px",
+              sm: "85px",
+              md: "calc(12vw - 10px)",
+              lg: "calc(9vw - 10px)",
+            },
             fontWeight: 700,
             textShadow: "2px 2px black",
           }}
@@ -78,10 +89,11 @@ const Hero = () => {
           color="#fff"
           textAlign="center"
           sx={{
-            fontSize: "28px",
+            fontSize: { xs: "18px", sm: "24px", md: "28px", lg: "32px" },
             textShadow: "1px 1px black",
-            maxWidth: "800px",
+            maxWidth: { xs: "300px", sm: "600px", md: "700px", lg: "800px" },
             lineHeight: 1.1,
+            marginTop: { xs: 2, lg: 0 },
           }}
         >
           Bringing the power of modern web development right to you! With a

@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -14,25 +15,29 @@ const ImageTextParagraph = ({
 }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const [animated, setAnimated] = useState(false);
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
+    if (!animated) {
+      if (inView) {
+        control.start("visible");
+        setAnimated(true);
+      } else {
+        control.start("hidden");
+        setAnimated(false);
+      }
     }
   }, [control, inView]);
 
   return (
     <Box
-      component="section"
       sx={{
         display: "flex",
         flexDirection: { xs: `${mobileDirection}`, md: `${direction}` },
         justifyContent: "center",
         alignItems: { xs: "center", md: "flex-start" },
         width: "100%",
-        pt: 10,
-        pb: 10,
+        pt: { xs: 5, md: 10 },
+        pb: { xs: 5, sm: 2, md: 10 },
       }}
     >
       <Box
@@ -70,7 +75,9 @@ const ImageTextParagraph = ({
           initial="hidden"
           animate={control}
         >
-          <Typography variant="h3">{header}</Typography>
+          <Typography variant="h3" sx={{ marginTop: { xs: 2, md: 0 } }}>
+            {header}
+          </Typography>
           <Typography
             sx={{ maxWidth: { xs: "600px", md: "400px", lg: "500px" }, mt: 2 }}
           >
