@@ -9,7 +9,7 @@ import { fadeIn } from "../hooks/AnimationOptions";
 import flipData from "../data/FlipCardData";
 
 const pages = [
-  "https://github.com/devfromnyc/youtube_clone",
+  "https://clone-38aca.web.app/",
   "https://savr-app-frontend-382e7.web.app/",
   "https://github.com/devfromnyc/todo-list",
   "#",
