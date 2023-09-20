@@ -8,6 +8,13 @@ import { useEffect, useState } from "react";
 import { fadeIn } from "../hooks/AnimationOptions";
 import flipData from "../data/FlipCardData";
 
+const pages = [
+  "https://github.com/devfromnyc/youtube_clone",
+  "https://savr-app-frontend-382e7.web.app/",
+  "https://github.com/devfromnyc/todo-list",
+  "#",
+];
+
 const FlipImages = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -88,14 +95,19 @@ const FlipImages = () => {
             pb: { xs: 12, lg: 24, xl: 32 },
           }}
         >
-          {flipData.map((item) => (
+          {flipData.map((item, index) => (
             <ImageListItem
               key={item.img}
+              component="a"
+              href={pages[index]}
+              role="link"
+              target="_blank"
               sx={{
                 mt: 4,
                 pl: 2,
                 pr: 2,
                 perspective: "1000px",
+                color: "#fff",
                 backgroundColor: "transparent",
               }}
             >
