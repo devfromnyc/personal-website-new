@@ -37,7 +37,7 @@ const TextParagraph = ({
         justifyContent: "start",
         alignItems: "center",
         width: "100%",
-        py: 12,
+        py: { xs: 8, md: 12 },
         backgroundColor: "rgb(133,105,65)",
       }}
     >
@@ -51,7 +51,11 @@ const TextParagraph = ({
         <Typography
           variant={variant}
           className="slide-up"
-          sx={{ textAlign: `${textAlignment}`, fontWeight: "700" }}
+          sx={{
+            textAlign: `${textAlignment}`,
+            fontWeight: "700",
+            fontSize: { xs: "2.75rem", md: "3.75rem" },
+          }}
         >
           {header}
         </Typography>
@@ -73,7 +77,7 @@ const TextParagraph = ({
           sx={{
             marginTop: 5,
             maxWidth: "700px",
-            fontSize: "20px",
+            fontSize: { xs: "16px", md: "20px" },
             textAlign: `${textAlignment}`,
           }}
         >

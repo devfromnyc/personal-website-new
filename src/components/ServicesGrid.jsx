@@ -42,7 +42,7 @@ const ServicesGrid = ({
           justifyContent: "center",
           alignItems: "flex-start",
           width: "100%",
-          paddingInlineStart: { xs: "20px !important", md: "0px !important" },
+          paddingInlineStart: "0px !important",
         }}
       >
         <Grid

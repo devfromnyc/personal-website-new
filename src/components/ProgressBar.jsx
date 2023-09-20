@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { fadeLeft } from "../hooks/AnimationOptions";
+import { perspective } from "../hooks/AnimationOptions";
 
 function LinearProgressWithLabel(props) {
   return (
@@ -80,7 +80,7 @@ const ProgressBar = ({ maxValue }) => {
       <motion.div
         className="slide-left"
         ref={ref}
-        variants={fadeLeft}
+        variants={perspective}
         initial="hidden"
         animate={control}
       >

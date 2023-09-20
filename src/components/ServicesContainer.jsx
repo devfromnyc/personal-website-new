@@ -25,10 +25,14 @@ const ServicesContainer = () => {
         textAlign: "center",
         backgroundColor: "#fff",
         color: "#000",
-        py: 12,
+        pt: { xs: 8, sm: 12 },
+        pb: { xs: 0, sm: 12 },
       }}
     >
-      <Typography variant="h2" sx={{ fontWeight: "700" }}>
+      <Typography
+        variant="h2"
+        sx={{ fontSize: { xs: "2.75rem", md: "3.75rem" }, fontWeight: "700" }}
+      >
         What I Do
       </Typography>
       <Divider
@@ -37,11 +41,7 @@ const ServicesContainer = () => {
       />
       <ServicesGrid
         header="Web Development"
-        paragraphText="I'm a web developer based out of New York City with 6+ years of
-          experience in the field. My mission is to provide a professional web
-          development experience to propel your business or personal aspirations.
-          I possess a variety of skills including modern technologies like MERN
-          stack, React.js, Material UI, & More!"
+        paragraphText="I provide a variety of different web development services to fit your needs including but not limited to static & dynamic websites, full stack web applications, frontend development work, & more!"
         mainImage={{
           src:
             "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",

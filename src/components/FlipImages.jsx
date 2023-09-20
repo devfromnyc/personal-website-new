@@ -5,7 +5,7 @@ import { Typography, Divider } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import { fadeLeft } from "../hooks/AnimationOptions";
+import { fadeIn } from "../hooks/AnimationOptions";
 import flipData from "../data/FlipCardData";
 
 const FlipImages = () => {
@@ -47,12 +47,23 @@ const FlipImages = () => {
           width: "100%",
           backgroundColor: "rgb(44,46,45)",
           py: { xs: 8, sm: 14, lg: 20 },
+          margin: { xs: "0 auto -110px auto", sm: "0 auto -160px auto" },
         }}
       >
-        <Typography variant="h2">Portfolio</Typography>
+        <Typography
+          variant="h2"
+          sx={{ fontSize: { xs: "2.75rem", md: "3.75rem" } }}
+        >
+          Portfolio
+        </Typography>
         <Divider
           variant="middle"
-          sx={{ mt: 2, width: "25%", borderColor: "#fff", mb: 10 }}
+          sx={{
+            mt: 2,
+            width: "25%",
+            borderColor: "#fff",
+            mb: { xs: 5, sm: 10 },
+          }}
         />
       </Box>
       <Box
@@ -60,7 +71,7 @@ const FlipImages = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: { xs: "-110px auto 0px auto", sm: "-160px auto 0px auto" },
+          margin: "0 auto",
           maxWidth: "1400px",
           width: "90%",
           height: "auto",
@@ -91,7 +102,7 @@ const FlipImages = () => {
               <motion.div
                 className="slide-left"
                 ref={ref}
-                variants={fadeLeft}
+                variants={fadeIn}
                 initial="hidden"
                 animate={control}
               >

@@ -66,11 +66,12 @@ const Hero = () => {
           textAlign="center"
           sx={{
             fontSize: {
-              xs: "50px",
+              xs: "70px",
               sm: "85px",
               md: "calc(12vw - 10px)",
               lg: "calc(9vw - 10px)",
             },
+            lineHeight: 1,
             fontWeight: 700,
             textShadow: "2px 2px black",
           }}

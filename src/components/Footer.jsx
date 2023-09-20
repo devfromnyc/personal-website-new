@@ -20,7 +20,7 @@ const Footer = () => {
         alignItems: "center",
         width: "100%",
         backgroundColor: "rgb(44,46,45)",
-        py: 18,
+        py: { xs: 8, sm: 12, md: 18 },
       }}
     >
       <Box
@@ -42,7 +42,7 @@ const Footer = () => {
             width: "100%",
           }}
         >
-          <Typography variant="h3" sx={{ fontSize: "28px" }}>
+          <Typography variant="h3" sx={{ fontSize: "28px", mb: 2 }}>
             James Jannetti
           </Typography>
           <Box
@@ -52,8 +52,9 @@ const Footer = () => {
               justifyContent: "space-between",
               paddingInlineStart: "0px !important",
               mt: 1,
-              mb: 0,
-              width: "500px",
+              mb: { xs: 4, sm: 2 },
+              width: "100%",
+              maxWidth: { xs: "300px", lg: "400px", xl: "500px" },
             }}
           >
             {footerMenu.map((menuItem) => (
@@ -77,7 +78,9 @@ const Footer = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
-              width: "170px",
+              width: "100%",
+              maxWidth: "170px",
+              mb: { xs: 2 },
             }}
           >
             {footerIcons.map((icon) => (

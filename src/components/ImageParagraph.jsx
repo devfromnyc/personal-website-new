@@ -41,7 +41,7 @@ const ImageTextParagraph = ({
       }}
     >
       <Box
-        sx={{ width: { xs: "85%", md: "60%", lg: "50%" }, maxWidth: "600px" }}
+        sx={{ width: { xs: "95%", md: "60%", lg: "50%" }, maxWidth: "600px" }}
       >
         <motion.div
           className="perspective"
@@ -64,8 +64,8 @@ const ImageTextParagraph = ({
           alignItems: { xs: "center", lg: "flex-start" },
           flexDirection: "column",
           color: "#000",
-          textAlign: "left",
-          margin: { xs: 0, md: 4, lg: 12 },
+          textAlign: { xs: "center", md: "left" },
+          margin: { xs: 2, md: 4, lg: 12 },
         }}
       >
         <motion.div
@@ -75,7 +75,13 @@ const ImageTextParagraph = ({
           initial="hidden"
           animate={control}
         >
-          <Typography variant="h3" sx={{ marginTop: { xs: 2, md: 0 } }}>
+          <Typography
+            variant="h3"
+            sx={{
+              marginTop: { xs: 2, md: 0 },
+              fontSize: { xs: "30px", md: "3rem" },
+            }}
+          >
             {header}
           </Typography>
           <Typography
