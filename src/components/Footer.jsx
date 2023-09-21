@@ -6,7 +6,23 @@ import email from "../assets/gmail.png";
 
 const footerMenu = ["Home", "About", "Portfolio", "Pricing"];
 
-const footerIcons = [linkedIn, github, email];
+const footerIcons = [
+  {
+    src: linkedIn,
+    href: "https://www.linkedin.com/in/james-jannetti/",
+    alt: "LinkedIn Icon",
+  },
+  {
+    src: github,
+    href: "https://github.com/devfromnyc",
+    alt: "Github Icon",
+  },
+  {
+    src: email,
+    href: "mailto:devfromnyc@yahoo.com",
+    alt: "Email Icon",
+  },
+];
 
 const Footer = () => {
   return (
@@ -83,9 +99,9 @@ const Footer = () => {
               mb: { xs: 2 },
             }}
           >
-            {footerIcons.map((icon) => (
-              <Link href="#" key={icon}>
-                <img src={icon} alt="Footer Icon" className="footer-icon" />
+            {footerIcons.map((icon, index) => (
+              <Link href={icon.href} key={index}>
+                <img src={icon.src} alt={icon.alt} className="footer-icon" />
               </Link>
             ))}
           </Box>
