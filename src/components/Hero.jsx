@@ -124,6 +124,8 @@ const Hero = () => {
         >
           <Button
             variant="contained"
+            component="a"
+            href="#About"
             sx={{
               mr: { xs: "0px", sm: 4 },
               mb: { xs: 4, sm: 0 },
@@ -154,6 +156,8 @@ const Hero = () => {
         >
           <Button
             variant="contained"
+            component="a"
+            href="#Portfolio"
             sx={{
               backgroundColor: "transparent",
               border: "2px solid #fff",
