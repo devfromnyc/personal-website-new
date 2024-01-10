@@ -12,7 +12,7 @@ const pages = [
   "https://clone-38aca.web.app/",
   "https://savr-app-frontend-382e7.web.app/",
   "https://github.com/devfromnyc/todo-list",
-  "#",
+  "https://fitness-app-66e8e.web.app/",
 ];
 
 const FlipImages = () => {
